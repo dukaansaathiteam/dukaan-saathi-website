@@ -29,6 +29,32 @@ const problems = [
 
 function ProblemCard({ item, index }: { item: typeof problems[0]; index: number }) {
     const [isFlipped, setIsFlipped] = useState(false);
+    const lastTouchRef = React.useRef(0);
+
+    const handleTouchStart = () => {
+        lastTouchRef.current = Date.now();
+    };
+
+    const handleMouseEnter = () => {
+        // Only trigger hover if no touch event happened recently (prevents ghost clicks/hybrids)
+        if (Date.now() - lastTouchRef.current > 500) {
+            setIsFlipped(true);
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (Date.now() - lastTouchRef.current > 500) {
+            setIsFlipped(false);
+        }
+    };
+
+    const handleClick = () => {
+        // Only toggle on click if it WAS a touch event. 
+        // Mouse users use hover, so clicking shouldn't unexpectedly close it.
+        if (Date.now() - lastTouchRef.current < 500) {
+            setIsFlipped((prev) => !prev);
+        }
+    };
 
     return (
         <motion.div
@@ -36,9 +62,10 @@ function ProblemCard({ item, index }: { item: typeof problems[0]; index: number 
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.2 }}
             className="relative h-[320px] rounded-3xl overflow-hidden cursor-pointer shadow-lg dark:shadow-none"
-            onMouseEnter={() => setIsFlipped(true)}
-            onMouseLeave={() => setIsFlipped(false)}
-            onClick={() => setIsFlipped(!isFlipped)}
+            onTouchStart={handleTouchStart}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={handleClick}
         >
             {/* Problem State */}
             <div
