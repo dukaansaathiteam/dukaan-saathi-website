@@ -101,7 +101,7 @@ export function HeroSection() {
                     className="relative"
                 >
                     {/* Main Phone Mockup */}
-                    <div className="relative z-20 mx-auto w-[300px] md:w-[320px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden aspect-[9/19]">
+                    <div className="relative z-20 mx-auto w-[280px] md:w-[300px] lg:w-[320px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden aspect-[9/19]">
                         {/* Screen Content */}
                         <div className="h-full w-full bg-[#0b141a] relative flex flex-col">
                             {/* Header */}
@@ -116,19 +116,19 @@ export function HeroSection() {
                             {/* Chat Area */}
                             <div className="flex-1 p-4 space-y-4">
                                 <motion.div
-                                    initial={{ opacity: 0, x: -20 }}
+                                    initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 1 }}
-                                    className="bg-[#1f2c34] p-3 rounded-tr-lg rounded-br-lg rounded-bl-lg max-w-[85%] text-sm text-white"
+                                    className="bg-[#005c4b] p-3 rounded-tl-lg rounded-bl-lg rounded-br-lg max-w-[85%] ml-auto text-sm text-white shadow-md self-end"
                                 >
-                                    <p>Aaj ki sales report dikhao 📊</p>
+                                    <p>Aaj ki sales report batao 📊</p>
                                 </motion.div>
 
                                 <motion.div
-                                    initial={{ opacity: 0, x: 20 }}
+                                    initial={{ opacity: 0, x: -20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 2 }}
-                                    className="bg-[#005c4b] p-3 rounded-tl-lg rounded-bl-lg rounded-br-lg max-w-[85%] ml-auto text-sm text-white shadow-md self-end"
+                                    className="bg-[#1f2c34] p-3 rounded-tr-lg rounded-br-lg rounded-bl-lg max-w-[85%] text-sm text-white"
                                 >
                                     <p className="font-bold mb-1">📅 Today's Summary (9:00 PM)</p>
                                     <div className="space-y-1 text-xs opacity-90">
@@ -139,12 +139,12 @@ export function HeroSection() {
                                 </motion.div>
 
                                 <motion.div
-                                    initial={{ opacity: 0, x: -20 }}
+                                    initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: 3.5 }}
-                                    className="bg-[#1f2c34] p-3 rounded-tr-lg rounded-br-lg rounded-bl-lg max-w-[85%] text-sm text-white flex items-center gap-2"
+                                    className="bg-[#005c4b] p-3 rounded-tl-lg rounded-bl-lg rounded-br-lg max-w-[85%] ml-auto text-sm text-white shadow-md self-end flex items-center gap-2"
                                 >
-                                    <div className="w-1 h-4 bg-green-500 animate-pulse"></div>
+                                    <div className="w-1 h-4 bg-white animate-pulse"></div>
                                     Recording...
                                 </motion.div>
 
@@ -161,7 +161,7 @@ export function HeroSection() {
                     {/* Floating Elements */}
                     <motion.div
                         style={{ y: y2 }}
-                        className="absolute top-20 -left-10 z-30 bg-slate-800 p-4 rounded-xl shadow-xl border border-white/10 flex items-center gap-3"
+                        className="absolute top-10 -left-4 md:top-20 md:-left-10 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 flex items-center gap-3 scale-90 md:scale-100 origin-left"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.2 }}
@@ -174,7 +174,7 @@ export function HeroSection() {
                     </motion.div>
 
                     <motion.div
-                        className="absolute bottom-40 -right-5 z-30 bg-slate-800 p-4 rounded-xl shadow-xl border border-white/10"
+                        className="absolute bottom-20 -right-2 md:bottom-40 md:-right-5 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 scale-90 md:scale-100 origin-right"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.6 }}

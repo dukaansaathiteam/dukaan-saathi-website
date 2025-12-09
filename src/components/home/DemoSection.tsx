@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 
 const messages = [
-    { id: 1, type: "user", text: "Add 10kg Sugar", delay: 1000 },
+    { id: 1, type: "user", text: "10kg Chini add kardo", delay: 1000 },
     { id: 2, type: "bot", text: "✅ Added: 10kg Sugar\n📦 Current Stock: 45kg\n💰 Price: ₹42/kg", delay: 2500 },
-    { id: 3, type: "user", text: "Sold 2kg Sugar cash", delay: 4500 },
+    { id: 3, type: "user", text: "2kg Chini bechi cash mein", delay: 4500 },
     { id: 4, type: "bot", text: "✅ Sale Recorded: ₹84\n💳 Mode: Cash\n📉 Remaining Stock: 43kg", delay: 6000 },
-    { id: 5, type: "user", text: "Dukaan report", delay: 8000 },
+    { id: 5, type: "user", text: "Dukaan ki report bhejo", delay: 8000 },
     { id: 6, type: "bot", text: "📊 Today's Summary:\nTotal Sales: ₹4,520\nTotal Orders: 24\nTop Item: Rice\n\nDownload PDF 👇", delay: 9500 },
 ];
 
@@ -58,7 +58,7 @@ export function DemoSection() {
                         </p>
 
                         <ul className="space-y-4 mb-8">
-                            {["Instant Updates", "Works on 2G/3G", "Secure & Private", "Regional Language Support"].map((item, i) => (
+                            {["Instant Updates", "Secure & Private", "Regional Language Support"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-white">
                                     <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
                                         <div className="w-2 h-2 rounded-full bg-green-500" />
@@ -101,8 +101,8 @@ export function DemoSection() {
                                                 className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
                                             >
                                                 <div className={`max-w-[80%] p-3 rounded-lg text-sm shadow-sm ${msg.type === 'user'
-                                                        ? 'bg-[#005c4b] text-white rounded-tr-none'
-                                                        : 'bg-[#1f2c34] text-white rounded-tl-none whitespace-pre-wrap'
+                                                    ? 'bg-[#005c4b] text-white rounded-tr-none'
+                                                    : 'bg-[#1f2c34] text-white rounded-tl-none whitespace-pre-wrap'
                                                     }`}>
                                                     {msg.text}
                                                     <div className={`text-[10px] text-right mt-1 opacity-60 flex justify-end gap-1 ${msg.type === 'user' ? "text-green-200" : "text-slate-400"}`}>
