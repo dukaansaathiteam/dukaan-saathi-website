@@ -31,7 +31,7 @@ export function HeroSection() {
     }, []);
 
     return (
-        <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900 transition-colors duration-300">
+        <section className="relative min-h-screen flex items-center py-20 overflow-hidden bg-slate-900 transition-colors duration-300">
             {/* Animated Gradient Background */}
             <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-[30%] -left-[10%] w-[70%] h-[70%] rounded-full bg-blue-900/30 blur-[120px] mix-blend-screen animate-pulse-slow" />
@@ -101,7 +101,7 @@ export function HeroSection() {
                     className="relative"
                 >
                     {/* Main Phone Mockup */}
-                    <div className="relative z-20 mx-auto w-[280px] md:w-[300px] lg:w-[320px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden aspect-[9/19]">
+                    <div className="relative z-20 mx-auto w-[260px] md:w-[300px] lg:w-[320px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden aspect-[9/19]">
                         {/* Screen Content */}
                         <div className="h-full w-full bg-[#0b141a] relative flex flex-col">
                             {/* Header */}
@@ -161,7 +161,7 @@ export function HeroSection() {
                     {/* Floating Elements */}
                     <motion.div
                         style={{ y: y2 }}
-                        className="absolute top-10 -left-4 md:top-20 md:-left-10 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 flex items-center gap-3 scale-90 md:scale-100 origin-left"
+                        className="absolute top-[-1rem] left-1/2 -translate-x-1/2 md:top-20 md:left-auto md:translate-x-0 md:-left-10 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 flex items-center gap-3 w-max"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 1.2 }}
@@ -174,7 +174,7 @@ export function HeroSection() {
                     </motion.div>
 
                     <motion.div
-                        className="absolute bottom-20 -right-2 md:bottom-40 md:-right-5 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 scale-90 md:scale-100 origin-right"
+                        className="absolute bottom-[-1rem] left-1/2 -translate-x-1/2 md:bottom-40 md:left-auto md:translate-x-0 md:-right-5 z-30 bg-slate-800 p-3 md:p-4 rounded-xl shadow-xl border border-white/10 w-max"
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 1.6 }}
