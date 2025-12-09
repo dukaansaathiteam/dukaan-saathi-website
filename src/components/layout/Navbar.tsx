@@ -43,7 +43,7 @@ export function Navbar() {
                         <div className="bg-gradient-to-tr from-[var(--color-secondary)] to-orange-600 p-2 rounded-lg text-white transform group-hover:rotate-12 transition-transform">
                             <ShoppingBag size={24} />
                         </div>
-                        <span className="text-3xl font-bold font-display text-white tracking-tight -mt-1 relative top-[-2px]">
+                        <span className="text-2xl md:text-3xl font-bold font-display text-white tracking-tight -mt-1 relative top-[-2px]">
                             Dukaan<span className="text-[var(--color-secondary)]">Saathi</span>
                         </span>
                     </Link>
