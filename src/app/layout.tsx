@@ -1,6 +1,7 @@
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { ChatWidget } from "@/components/chat/ChatWidget";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
@@ -10,10 +11,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-outfit",
 });
 
 export const metadata = {
@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${poppins.variable} antialiased font-sans bg-slate-950 text-white`}
+        className={`${inter.variable} ${outfit.variable} antialiased font-sans bg-slate-950 text-white`}
       >
         <ThemeProvider
           attribute="class"
@@ -40,6 +40,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <ChatWidget />
         </ThemeProvider>
       </body>
     </html>

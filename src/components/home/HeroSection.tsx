@@ -72,11 +72,14 @@ export function HeroSection() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4">
-                        <Button size="lg" variant="gradient" className="text-lg group">
-                            Start Free Trial
-                            <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                        <Button size="lg" variant="gradient" className="text-lg group relative overflow-hidden shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all duration-300">
+                            <span className="relative z-10 flex items-center">
+                                Start Free Trial
+                                <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                            </span>
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-[100%] group-hover:animate-[shimmer_1.5s_infinite]" />
                         </Button>
-                        <Button size="lg" variant="outline" className="text-lg gap-2">
+                        <Button size="lg" variant="outline" className="text-lg gap-2 border-white/10 hover:bg-white/5 backdrop-blur-sm">
                             <PlayCircle size={20} />
                             Watch Demo
                         </Button>
@@ -101,7 +104,8 @@ export function HeroSection() {
                     className="relative"
                 >
                     {/* Main Phone Mockup */}
-                    <div className="relative z-20 mx-auto w-[260px] md:w-[300px] lg:w-[320px] bg-slate-900 rounded-[3rem] border-8 border-slate-800 shadow-2xl overflow-hidden aspect-[9/19]">
+                    <div className="absolute -inset-4 bg-gradient-to-tr from-[var(--color-secondary)]/10 to-blue-600/10 rounded-[3.5rem] blur-2xl -z-10" />
+                    <div className="relative z-20 mx-auto w-[260px] md:w-[300px] lg:w-[320px] bg-[#020617] rounded-[3rem] border-[6px] border-[#1e293b] shadow-2xl overflow-hidden aspect-[9/19] ring-1 ring-white/10">
                         {/* Screen Content */}
                         <div className="h-full w-full bg-[#0b141a] relative flex flex-col">
                             {/* Header */}
